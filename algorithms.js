@@ -57,4 +57,31 @@ function isPalindrome(input)  {
 //isPalindrome(12321);
 isPalindrome('race car');
 
+// FIND THE LARGEST NUMBER
+// Write a function called largestNumber that will return the largest value from an array.
+// Input: [1,2,5,10]
+// Output: 10
+
+function largestNumber(array) {
+  let newArray = array;
+  //set largest to 0
+  let result = [];
+  //loop through the array.
+  for (let i=0; i<newArray.length; i++) {
+    //set the variable largest as the number in the array
+    let largest = newArray[i];
+    //loop through array a second time.
+    for (let j=1; j<newArray.length; j++) {
+      //if the next number in the array is largest than the last, that is the largest number.
+      if (newArray[j] > largest) {
+        largest = newArray[j];
+      }
+    }
+    result = largest;
+    }
+  //return the largest number
+  return result
+}
+
+largestNumber([1,2,5,10]);
 
