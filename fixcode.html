@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Clicker</title>
+    <meta name="description" content="">
+    <style></style>
+</head>
+<body>
+    <button>Click!</button>
+
+<script>
+    const counter = {
+        cnt: 0,
+        inc: function() {
+            this.cnt++;
+            console.log(this.cnt);
+        }
+    };
+    const button = document.getElementsByTagName('button')[0];
+    button.addEventListener('click', counter.inc.bind(counter));
+</script>
+</body>
+</html>
+ @ripulchhabra
+ripulchhabra commented on Jul 22, 2017 •
+please provide the solution.
+I have tried this solution but the click event is not executing again.
+
+`
+
+<title>Clicker</title> <style></style> Click! <script> const counter = { cnt: 0, inc: function() { this.cnt++; console.log(this.cnt); } }; const button = document.getElementsByTagName('button')[0]; button.addEventListener('click', counter.inc(), false); </script> `
+Please explain
+
+@faizanakram99
+faizanakram99 commented on Jul 23, 2017 •
+Here is the answer
+
+const counter = {
+        cnt: 0,
+        inc: function() {
+    this.cnt++;
+              console.log(this.cnt);
+        }
+    };
+    const button = document.getElementsByTagName('button')[0];
+    button.addEventListener('click', counter.inc.bind(counter));

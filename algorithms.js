@@ -62,6 +62,10 @@ isPalindrome('race car');
 // Input: [1,2,5,10]
 // Output: 10
 
+const largestNumber = (array) => {
+
+}
+
 function largestNumber(array) {
   let newArray = array;
   //set largest to 0
@@ -78,10 +82,28 @@ function largestNumber(array) {
       }
     }
     result = largest;
-    }
+  }
   //return the largest number
   return result
 }
 
 largestNumber([1,2,5,10]);
+
+
+// PRINT A PYRAMID
+// Write a function called buildPyramid that given a number, creates a pyramid that is that number of rows.
+// Input: pyramid(4)
+
+function buildPyramid(rows) {
+  let shape = '^';
+  let pyramid = '';
+
+  for (let i=0; i<=rows-1; i++) {
+    pyramid += (shape + '\n')
+    console.log(pyramid)
+  }
+}
+
+buildPyramid(4);
+
 
